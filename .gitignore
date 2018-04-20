@@ -1,0 +1,14 @@
+/todoi_cli/__pycache__
+/todoi_cli/Scripts
+/todoi_cli/Include
+/todoi_cli/Lib
+/todoi_cli/tcl
+
+/todoi_cli/bin
+/todoi_cli/include
+/todoi_cli/lib
+
+/config.ini
+/todoi_cli/pip-selfcheck.json
+
+.idea/
