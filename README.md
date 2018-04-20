@@ -2,6 +2,7 @@
 
 ## Basic Overview
 
+This is under development
 
 todoicli is a tool for using todoist from the command line.
 
@@ -12,7 +13,7 @@ It has the following functions.
   - new project
   - new label
 - Delete
-  -
+  - task
 - Display
   - all task
   - today task
@@ -30,9 +31,7 @@ It has the following functions.
 
 ## Installation
 
-```python
-pip install todoicli
-```
+under construction
 
 ## After installation
 
