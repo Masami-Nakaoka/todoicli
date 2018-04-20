@@ -45,7 +45,7 @@ def get_args():
     all_list_parser = list_subparser.add_parser('al', help='Show all incomplete tasks')
     all_list_parser.set_defaults(func=TodoistList.show_all_tasks)
 
-    today_list_parser = list_subparser.add_parser('td', help='Show today incomplete tasks')
+    today_list_parser = list_subparser.add_parser('td', help="List of today's tasks and expired tasks")
     today_list_parser.set_defaults(func=TodoistList.show_today_tasks)
 
     next7days_list_parser = list_subparser.add_parser('n7', help='Show tasks for the next 7 days')

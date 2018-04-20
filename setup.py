@@ -9,7 +9,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='todoicli',
-    version='1.0.0',
+    version='1.0.1',
     description='todoicli is a tool for using todoist from the command line.',
     long_description=long_description,
     url='https://github.com/Masami-Nakaoka/todoicli',
