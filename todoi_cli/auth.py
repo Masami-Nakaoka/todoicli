@@ -1,4 +1,5 @@
 import requests
+import sys
 
 from todoi_cli.checkconfig import checkconfig
 from getpass import getpass
@@ -17,7 +18,17 @@ def auth(args=None):
     
     if api_key == '':
         if auth_target == 'todoist':
-            api_key = input('Please enter api key of todoist: ')
+            api_key = None
+            roop_count = 0
+            while api_key is '' and roop_count <= 4:
+                api_key = input('Please enter api key of todoist: ')
+                roop_count += 1
+                
+                if api_key is '' and roop_count == 4:
+                    print('Feild todoist authentication')
+                    sys.exit(1)
+                    
+                
 
         elif auth_target == 'toggl':
             toggl_id = input('Enter e-mail: ')
