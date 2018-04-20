@@ -12,7 +12,6 @@ setup(
     version='1.0.0',
     description='todoicli is a tool for using todoist from the command line.',
     long_description=long_description,
-    long_description_content_type='text/markdown',
     url='https://github.com/Masami-Nakaoka/todoicli',
     license='MIT',
     author='Masami_Nakaoka',

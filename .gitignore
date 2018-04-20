@@ -12,3 +12,5 @@
 /todoi_cli/pip-selfcheck.json
 
 .idea/
+dist/
+todoicli.egg-info/
