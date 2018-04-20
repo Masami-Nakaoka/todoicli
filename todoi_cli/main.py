@@ -26,7 +26,7 @@ def get_args():
     del_parser = subparser.add_parser('del', help='Delete task')
     pj_parser = subparser.add_parser('pj', help='Commands that control project relationships')
     lb_parser = subparser.add_parser('lb', help='Commands that control label relationships')
-    toggl_parser = subparser.add_parser('toggl', help='Initialize toggl')
+    toggl_parser = subparser.add_parser('toggl', help='Start or stop time tracking')
     
     # init parser
     auth_subparser = auth_parser.add_subparsers(title='auth')
