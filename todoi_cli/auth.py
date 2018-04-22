@@ -8,8 +8,6 @@ from getpass import getpass
 def auth(args=None):
     if args is None:
         auth_target = 'todoist'
-    else:
-        auth_target = args.target
     
     config_check_result = checkconfig()
     config = config_check_result[0]
@@ -20,14 +18,13 @@ def auth(args=None):
         if auth_target == 'todoist':
             api_key = None
             roop_count = 0
-            while api_key is '' and roop_count <= 4:
+            while api_key is '':
                 api_key = input('Please enter api key of todoist: ')
                 roop_count += 1
-                print(roop_count)
                 
                 if api_key is '' and roop_count == 4:
                     print('Feild todoist authentication')
-                    sys.exit(1)
+                    return
                     
         elif auth_target == 'toggl':
             toggl_id = input('Enter e-mail: ')
