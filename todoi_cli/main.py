@@ -48,7 +48,7 @@ def get_args():
     today_list_parser = list_subparser.add_parser('td', help="List of today's tasks and expired tasks")
     today_list_parser.set_defaults(func=TodoistList.show_today_tasks)
 
-    next7days_list_parser = list_subparser.add_parser('n7', help='Show tasks for the next 7 days')
+    next7days_list_parser = list_subparser.add_parser('n7', help="List of today's tasks and expired tasks")
     next7days_list_parser.set_defaults(func=TodoistList.show_next7days_tasks)
 
     project_list_parser = list_subparser.add_parser('pj', help='Show all projects')

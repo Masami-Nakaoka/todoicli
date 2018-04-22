@@ -12,6 +12,7 @@ setup(
     version='1.0.1',
     description='todoicli is a tool for using todoist from the command line.',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/Masami-Nakaoka/todoicli',
     license='MIT',
     author='Masami_Nakaoka',
@@ -19,15 +20,13 @@ setup(
 
     classifiers=[
         'Development Status :: 5 - Production/Stable',
-        'Intended Audience :: Developers',
-        'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4'
     ],
 
-    keywords='todoist command line',
+    keywords='todoicli todoist command line',
     packages=find_packages(exclude=['todoicli']),
     install_requires=['todoist-python'],
 

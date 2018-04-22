@@ -23,13 +23,12 @@ def auth(args=None):
             while api_key is '' and roop_count <= 4:
                 api_key = input('Please enter api key of todoist: ')
                 roop_count += 1
+                print(roop_count)
                 
                 if api_key is '' and roop_count == 4:
                     print('Feild todoist authentication')
                     sys.exit(1)
                     
-                
-
         elif auth_target == 'toggl':
             toggl_id = input('Enter e-mail: ')
             toggl_pass = getpass('Enter password: ')
