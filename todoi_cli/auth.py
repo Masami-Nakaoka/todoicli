@@ -8,22 +8,25 @@ from getpass import getpass
 def auth(args=None):
     if args is None:
         auth_target = 'todoist'
-    
+    else:
+        auth_target = args.target
+
     config_check_result = checkconfig()
     config = config_check_result[0]
     config_path = config_check_result[1]
     api_key = config['API_KEY'].get(auth_target)
+
+    print(api_key)
     
     if api_key == '':
         if auth_target == 'todoist':
-            api_key = None
             roop_count = 0
-            while api_key is '':
+            while api_key == '':
                 api_key = input('Please enter api key of todoist: ')
                 roop_count += 1
                 
                 if api_key is '' and roop_count == 4:
-                    print('Feild todoist authentication')
+                    print('Failed to set API_KEY.')
                     return
                     
         elif auth_target == 'toggl':
@@ -40,7 +43,7 @@ def auth(args=None):
         with open(str(config_path), 'w') as f:
             config.write(f)
 
-        print('Authentication is completed')
+        print('Setting of API_KEY is completed.')
 
     else:
         print('{} has already been authenticated'.format(auth_target))
