@@ -9,7 +9,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='todoicli',
-    version='1.0.1',
+    version='1.0.8',
     description='todoicli is a tool for using todoist from the command line.',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -32,7 +32,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'todoicli=main:main',
+            'todoicli=todoi_cli.main:main',
         ],
     },
 )
