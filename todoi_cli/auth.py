@@ -35,9 +35,14 @@ def auth(args=None):
 
             payload = (toggl_id, toggl_pass)
 
-            res = requests.get('https://www.toggl.com/api/v8/me', auth=payload).json()
+            res = requests.get('https://www.toggl.com/api/v8/me', auth=payload)
 
-            api_key = res['data']['api_token']
+            if res.ok is True:
+                res_text = res.json()
+                api_key = res_text['data']['api_token']
+            else:
+                print('Authentication of toggl failed.')
+                return
             
         config['API_KEY'][auth_target] = api_key
         with open(str(config_path), 'w') as f:
