@@ -2,8 +2,6 @@
 
 ## Basic Overview
 
-This is under development
-
 todoicli is a tool for using todoist from the command line.
 
 It has the following functions.
@@ -31,7 +29,9 @@ It has the following functions.
 
 ## Installation
 
-under construction
+```python
+pip install todoicli
+```
 
 ## After installation
 
