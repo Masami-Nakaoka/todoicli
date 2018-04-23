@@ -32,7 +32,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'todoicli=todoi_cli.main:main',
+            'todoicli=main:main',
         ],
     },
 )
