@@ -1,5 +1,4 @@
 import requests
-import sys
 
 from todoi_cli.checkconfig import checkconfig
 from getpass import getpass
@@ -26,7 +25,7 @@ def auth(args=None):
                 roop_count += 1
                 
                 if api_key is '' and roop_count == 4:
-                    print('Failed to set API_KEY.')
+                    print('Error: Failed to set API_KEY.')
                     return
                     
         elif auth_target == 'toggl':
@@ -41,7 +40,7 @@ def auth(args=None):
                 res_text = res.json()
                 api_key = res_text['data']['api_token']
             else:
-                print('Authentication of toggl failed.')
+                print('Error : Authentication of toggl failed.')
                 return
             
         config['API_KEY'][auth_target] = api_key
