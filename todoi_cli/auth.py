@@ -15,8 +15,6 @@ def auth(args=None):
     config_path = config_check_result[1]
     api_key = config['API_KEY'].get(auth_target)
 
-    print(api_key)
-    
     if api_key == '':
         if auth_target == 'todoist':
             roop_count = 0
